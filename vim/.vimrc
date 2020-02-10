@@ -37,7 +37,7 @@ set shiftwidth=2  " 2 spaces per indentation
 autocmd FileType make setlocal noexpandtab
 autocmd FileType Makefile setlocal noexpandtab
 autocmd FileType makefile setlocal noexpandtab
-autocmd VimLeave * macaction terminate: "macvim app terminates on :q
+" autocmd VimLeave * macaction terminate: "macvim app terminates on :q
 
 autocmd FileType sh setlocal shiftwidth=4
 
