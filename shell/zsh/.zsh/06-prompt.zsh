@@ -67,7 +67,7 @@ git_info() {
   [[ $behind -gt 0 ]] && indicators+=" %{$fg[cyan]%}↓${behind}%{$reset_color%}"
   
   # Build output with brackets
-  echo "[%{$fg[blue]%}${branch}%{$reset_color%} ${indicators}] "
+  echo "[%{$fg[blue]%}${branch}%{$reset_color%}${indicators:+ ${indicators}}] "
 }
 
 # ----------------------------------------------------------------------------
