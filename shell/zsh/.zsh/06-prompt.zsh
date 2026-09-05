@@ -71,6 +71,13 @@ git_info() {
 }
 
 # ----------------------------------------------------------------------------
+# Hostname (overridable via _prompt_hostname in 99-local.zsh)
+# ----------------------------------------------------------------------------
+hostname_info() {
+  echo "%{$fg[magenta]%}(${_prompt_hostname:-$(hostname -s)})%{$reset_color%} "
+}
+
+# ----------------------------------------------------------------------------
 # Current directory (shortened)
 # ----------------------------------------------------------------------------
 current_dir() {
@@ -84,7 +91,7 @@ setopt prompt_subst
 # Prompt definition
 # ----------------------------------------------------------------------------
 
-PROMPT='$(git_info)$(current_dir) $(virtualenv_info)$(ruby_version_info)
+PROMPT='$(hostname_info)$(git_info)$(current_dir) $(virtualenv_info)$(ruby_version_info)
 %{$fg[cyan]%}➜%{$reset_color%}  '
 
 # No right prompt

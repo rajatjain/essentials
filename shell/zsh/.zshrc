@@ -26,6 +26,7 @@ source ~/.zsh/04-functions.zsh    # Helper functions
 source ~/.zsh/05-completion.zsh   # Tab completion settings
 source ~/.zsh/06-prompt.zsh       # Prompt configuration
 source ~/.zsh/07-keybindings.zsh  # Keyboard shortcuts
+[[ -f ~/.zsh/99-local.zsh ]] && source ~/.zsh/99-local.zsh  # Machine-specific overrides
 
 # ----------------------------------------------------------------------------
 # TERMINAL-SPECIFIC INTEGRATIONS
